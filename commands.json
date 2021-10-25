@@ -1,0 +1,548 @@
+{
+	"commands": [
+		{
+			"name": "permit",
+			"description": "Customise the permissions for your server bot commands.",
+			"options": [
+				{
+					"type": 1,
+					"name": "list",
+					"description": "List all the permit level you set for this server.",
+					"options": []
+				},
+				{
+					"type": 1,
+					"name": "reset",
+					"description": "Reset permit level in your server to default.",
+					"options": []
+				},
+				{
+					"type": 1,
+					"name": "enable",
+					"description": "Enable a command in your server.",
+					"options": [
+						{
+							"type": 3,
+							"name": "command",
+							"description": "Write the name of command.",
+							"required": true
+						}
+					]
+				},
+				{
+					"type": 1,
+					"name": "disable",
+					"description": "Disable a command in your server.",
+					"options": [
+						{
+							"type": 3,
+							"name": "command",
+							"description": "Write the name of command.",
+							"required": true
+						}
+					]
+				},
+				{
+					"type": 2,
+					"name": "set",
+					"description": "Set permission level for your server",
+					"options": [
+						{
+							"type": 1,
+							"name": "role",
+							"description": "Set permission level for a role.",
+							"options": [
+								{
+									"type": 4,
+									"name": "permit_level",
+									"description": "Choose permit level.",
+									"required": true,
+									"choices": [
+										{
+											"name": "REGULAR",
+											"value": 1
+										},
+										{
+											"name": "SUPPORTER",
+											"value": 2
+										},
+										{
+											"name": "MODERATOR",
+											"value": 3
+										},
+										{
+											"name": "ADMINISTRATOR",
+											"value": 4
+										},
+										{
+											"name": "OWNER",
+											"value": 5
+										}
+									]
+								},
+								{
+									"type": 8,
+									"name": "role",
+									"description": "Choose role.",
+									"required": true
+								}
+							]
+						},
+						{
+							"type": 1,
+							"name": "user",
+							"description": "Set permission for a member.",
+							"options": [
+								{
+									"type": 4,
+									"name": "permit_level",
+									"description": "Choose permit level",
+									"required": true,
+									"choices": [
+										{
+											"name": "REGULAR",
+											"value": 1
+										},
+										{
+											"name": "SUPPORTER",
+											"value": 2
+										},
+										{
+											"name": "MODERATOR",
+											"value": 3
+										},
+										{
+											"name": "ADMINISTRATOR",
+											"value": 4
+										},
+										{
+											"name": "OWNER",
+											"value": 5
+										}
+									]
+								},
+								{
+									"type": 6,
+									"name": "user",
+									"description": "Select user.",
+									"required": true
+								}
+							]
+						},
+						{
+							"type": 1,
+							"name": "command",
+							"description": "Set new permission level for your server command",
+							"options": [
+								{
+									"type": 3,
+									"name": "command",
+									"description": "Write the name of command.",
+									"required": true
+								},
+								{
+									"type": 4,
+									"name": "permit_level",
+									"description": "Select permit level.",
+									"required": true,
+									"choices": [
+										{
+											"name": "REGULAR",
+											"value": 1
+										},
+										{
+											"name": "SUPPORTER",
+											"value": 2
+										},
+										{
+											"name": "MODERATOR",
+											"value": 3
+										},
+										{
+											"name": "ADMINISTRATOR",
+											"value": 4
+										},
+										{
+											"name": "OWNER",
+											"value": 5
+										}
+									]
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": 2,
+					"name": "remove",
+					"description": "Remove permission level from a role, user or command.",
+					"options": [
+						{
+							"type": 1,
+							"name": "role",
+							"description": "Remove permission level from a role.",
+							"options": [
+								{
+									"type": 8,
+									"name": "role",
+									"description": "Choose the role.",
+									"required": true
+								}
+							]
+						},
+						{
+							"type": 1,
+							"name": "user",
+							"description": "Remove permission level from a member.",
+							"options": [
+								{
+									"type": 6,
+									"name": "user",
+									"description": "Choose the member.",
+									"required": true
+								}
+							]
+						},
+						{
+							"type": 1,
+							"name": "command",
+							"description": "Commad you want to get permission level",
+							"options": [
+								{
+									"type": 3,
+									"name": "command",
+									"description": "Write the name of command.",
+									"required": true
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": 2,
+					"name": "get",
+					"description": "Get permit level of a role, user, or command.",
+					"options": [
+						{
+							"type": 1,
+							"name": "role",
+							"description": "Check permission level of a role.",
+							"options": [
+								{
+									"type": 8,
+									"name": "role",
+									"description": "Choose the role",
+									"required": true
+								}
+							]
+						},
+						{
+							"type": 1,
+							"name": "user",
+							"description": "Check permission level of a member.",
+							"options": [
+								{
+									"type": 6,
+									"name": "user",
+									"description": "Choose the member.",
+									"required": true
+								}
+							]
+						},
+						{
+							"type": 1,
+							"name": "command",
+							"description": "Commad you want to get permission level",
+							"options": [
+								{
+									"type": 3,
+									"name": "command",
+									"description": "Write the name of command.",
+									"required": true
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "about",
+			"description": "Get to know more about the bot",
+			"options": []
+		},
+		{
+			"name": "help",
+			"description": "Get help of a command.",
+			"options": [
+				{
+					"type": 3,
+					"name": "command",
+					"description": "Command you want help for.",
+					"required": false
+				},
+				{
+					"type": 5,
+					"name": "hide",
+					"description": "You want to hide help message or not.",
+					"required": false
+				}
+			]
+		}
+	],
+	"developerCommands": [
+		{
+			"name": "config",
+			"description": "Config bot configuration values like color, avatar etc.",
+			"options": [
+				{
+					"type": 2,
+					"name": "set",
+					"description": "Set config value for your bot.",
+					"options": [
+						{
+							"type": 1,
+							"name": "avatar",
+							"description": "Set avatar for the bot.",
+							"options": [
+								{
+									"type": 3,
+									"name": "avatar_url",
+									"description": "Write the image url here.",
+									"required": true
+								}
+							]
+						},
+						{
+							"type": 1,
+							"name": "status",
+							"description": "Set your bot status as idle, offline, online or dnd.",
+							"options": [
+								{
+									"type": 3,
+									"name": "status",
+									"description": "Choose the status option from here.",
+									"required": true,
+									"choices": [
+										{
+											"name": "IDLE",
+											"value": "idle"
+										},
+										{
+											"name": "OFFLINE",
+											"value": "invisible"
+										},
+										{
+											"name": "DND",
+											"value": "dnd"
+										},
+										{
+											"name": "ONLINE",
+											"value": "online"
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": 1,
+							"name": "activity",
+							"description": "Set activity for your bot.",
+							"options": [
+								{
+									"type": 3,
+									"name": "type",
+									"description": "Choose the type of activity.",
+									"required": true,
+									"choices": [
+										{
+											"name": "Playing",
+											"value": "PLAYING"
+										},
+										{
+											"name": "Watching",
+											"value": "WATCHING"
+										},
+										{
+											"name": "Listening",
+											"value": "LISTENING"
+										},
+										{
+											"name": "Streaming",
+											"value": "STREAMING"
+										},
+										{
+											"name": "Competing",
+											"value": "COMPETING"
+										}
+									]
+								},
+								{
+									"type": 3,
+									"name": "content",
+									"description": "Write the message status will have like \"to your worries\"",
+									"required": true
+								},
+								{
+									"type": 3,
+									"name": "url",
+									"description": "Type the url if you want streaming activity.",
+									"required": false
+								}
+							]
+						},
+						{
+							"type": 1,
+							"name": "name",
+							"description": "Set the name of bot.",
+							"options": [
+								{
+									"type": 3,
+									"name": "name",
+									"description": "Write new name for your bot.",
+									"required": true
+								}
+							]
+						},
+						{
+							"type": 1,
+							"name": "color",
+							"description": "Set custom embed color for your bot.",
+							"options": [
+								{
+									"type": 3,
+									"name": "type",
+									"description": "Choose the type of embed color you want to change",
+									"required": true,
+									"choices": [
+										{
+											"name": "Main",
+											"value": "color.main"
+										},
+										{
+											"name": "Wrong",
+											"value": "color.wrong"
+										},
+										{
+											"name": "Error",
+											"value": "color.error"
+										},
+										{
+											"name": "Success",
+											"value": "color.success"
+										}
+									]
+								},
+								{
+									"type": 3,
+									"name": "colour",
+									"description": "Write your colour code.",
+									"required": true
+								}
+							]
+						},
+						{
+							"type": 1,
+							"name": "emoji",
+							"description": "Set reaction emojis for your bot.",
+							"options": [
+								{
+									"type": 3,
+									"name": "type",
+									"description": "Choose the type of reaction you want to change",
+									"required": true,
+									"choices": [
+										{
+											"name": "First Page Button",
+											"value": "emojis.firstButton"
+										},
+										{
+											"name": "Previous Page Button",
+											"value": "emojis.prevButton"
+										},
+										{
+											"name": "Next Page Button",
+											"value": "emojis.nextButton"
+										},
+										{
+											"name": "Last Page Button",
+											"value": "lastButton"
+										},
+										{
+											"name": "End Button",
+											"value": "emojis.endButton"
+										}
+									]
+								},
+								{
+									"type": 3,
+									"name": "emoji",
+									"description": "Write your emoji or emojiId below.",
+									"required": true
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": 1,
+					"name": "reset",
+					"description": "Reset a particular type of config or complete setup to default.",
+					"options": [
+						{
+							"type": 3,
+							"name": "data_type",
+							"description": "Choose the type of data from above list.",
+							"required": true,
+							"choices": [
+								{
+									"name": "Emojis",
+									"value": "emojis"
+								},
+								{
+									"name": "Bot Data",
+									"value": "bot"
+								},
+								{
+									"name": "Embed Color",
+									"value": "color"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "developer",
+			"description": "Commands which can only be used by bot developers.",
+			"options": [
+				{
+					"type": 1,
+					"name": "eval",
+					"description": "Evaluate code using commands.",
+					"options": [
+						{
+							"type": 3,
+							"name": "code",
+							"description": "Write your code you want the system to run!",
+							"required": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "reload",
+			"description": "Reload a command.",
+			"options": [
+				{
+					"type": 3,
+					"name": "command",
+					"description": "Write the name of command you want to reload",
+					"required": true
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,47 @@
+{
+  "name": "discord.js-template",
+  "version": "1.1.0",
+  "description": "A discord.js-template which handle most of the things in background.",
+  "main": "dist/src/main.js",
+  "scripts": {
+    "start": "node .",
+    "logger": "node src/base/logger",
+    "deploy": "node deploy.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShreyashKira/discord.js-template.git"
+  },
+  "keywords": [
+    "captcha",
+    "discord.js",
+    "discord-bot",
+    "bot",
+    "canvas"
+  ],
+  "author": "Shreyash Raj",
+  "license": "Apache License 2.0",
+  "bugs": {
+    "url": "https://github.com/Shashank3736/discord.js-template/issues"
+  },
+  "homepage": "https://github.com/Shashank3736/discord.js-template#readme",
+  "devDependencies": {
+    "@types/node": "^16.11.3",
+    "typescript": "^4.4.4"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "engineStrict": true,
+  "dependencies": {
+    "@discordjs/builders": "^0.7.0",
+    "@discordjs/rest": "^0.1.0-canary.0",
+    "discord-api-types": "^0.24.0",
+    "discord.js": "^13.2.0",
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.0.12",
+    "ms": "npm:@shreyash21/ms@^2.0.1",
+    "node-fetch": "^2.6.1",
+    "quick.db": "^7.1.3"
+  }
+}
